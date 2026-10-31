@@ -702,3 +702,7 @@ body.has-cur .cur, body.has-cur .cur-ring { opacity: 1; }
 
 /* CTA card: keep a gap under the dark FAQ section so the two dark blocks don't merge */
 #faq + .sec { padding-top: 28px !important; }
+
+/* Hero CTA and top-right Contact: same press / hover animation as the "Send us the raw footage" button, no pulsing glow */
+.hero .btn { animation: none; }
+@media (hover: hover) { .hero .btn:hover, .nav-btn:hover { background: var(--electric); color: #000; } }
