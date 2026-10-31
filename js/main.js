@@ -140,7 +140,7 @@ document.querySelectorAll('.bx').forEach(el => el.addEventListener('pointermove'
 }));
 
 /* stagger reveals inside groups */
-document.querySelectorAll('.bento, .proc, .vals, .stat-pill, .faq, .tools').forEach(p => [...p.children].forEach((c, i) => c.style.setProperty('--d', (i * 110) + 'ms')));
+document.querySelectorAll('.bento, .proc, .vals, .stat-pill, .faq, .tools, .tkit').forEach(p => [...p.children].forEach((c, i) => c.style.setProperty('--d', (i * 110) + 'ms')));
 
 /* spotlight on process cards */
 document.querySelectorAll('.pc, .val').forEach(el => el.addEventListener('pointermove', (e) => {

@@ -772,3 +772,20 @@ body.has-cur .cur, body.has-cur .cur-ring { opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .v-brand .sw, .v-ret .ln, .v-ret .area, .v-ret .dt, .v-ring .rg { animation: none !important; stroke-dashoffset: 0 !important; opacity: 1 !important; } }
 .rules .vno { top: 38px; left: 40px; right: auto; font-family: ui-monospace, Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .12em; color: #27fb6b; -webkit-text-stroke: 0; background: rgba(39,251,107,.12); border: 1px solid rgba(39,251,107,.3); padding: 3px 8px; border-radius: 999px; line-height: 1.2; }
 .rules .vno { z-index: 3; }
+
+/* About: toolkit as tool cards with glowing icons */
+.tkit { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.tk { position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; padding: 30px 14px 26px; border: 1px solid var(--line); border-radius: 24px; background: var(--card); box-shadow: var(--shadow);
+  transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s, border-color .4s; }
+.tk::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 50% 0%, var(--g), transparent 62%); opacity: .14; transition: opacity .4s; }
+.tk > * { position: relative; }
+.tk .ti { width: 78px; height: 78px; margin-bottom: 14px; filter: drop-shadow(0 8px 16px var(--g)); animation: tkfloat 4.6s ease-in-out infinite; }
+.tk:nth-child(2) .ti { animation-delay: -.9s; } .tk:nth-child(3) .ti { animation-delay: -1.8s; } .tk:nth-child(4) .ti { animation-delay: -2.7s; } .tk:nth-child(5) .ti { animation-delay: -3.6s; }
+.tk b { font-family: var(--font-display); font-weight: 600; font-size: 19px; letter-spacing: -.03em; color: var(--ink); }
+.tk span { font-size: 13px; color: var(--muted); }
+@keyframes tkfloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+.tk:hover { transform: translateY(-8px); border-color: var(--g); box-shadow: 0 30px 60px -30px var(--g); }
+.tk:hover::before { opacity: .26; }
+@media (max-width: 1000px) { .tkit { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { .tkit { grid-template-columns: 1fr 1fr; gap: 12px; } .tk:last-child { grid-column: 1 / -1; } .tk .ti { width: 66px; height: 66px; } }
+@media (prefers-reduced-motion: reduce) { .tk .ti { animation: none !important; } }
