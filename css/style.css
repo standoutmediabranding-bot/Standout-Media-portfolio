@@ -711,3 +711,7 @@ body.has-cur .cur, body.has-cur .cur-ring { opacity: 1; }
 .btn:active .ar { background: var(--btn-arbg); }
 .btn.light:active .ar { background: var(--ink); }
 @media (hover: hover) { .hero .btn:hover .ar, .nav-btn:hover .ar { background: var(--btn-arbg); color: var(--btn-arfg); } }
+
+/* Hero CTA keeps its pulsing glow (desktop and mobile); pressing still pops */
+.hero .btn { animation: ping 2.8s ease-out infinite; }
+.hero .btn:active { animation: none; }
