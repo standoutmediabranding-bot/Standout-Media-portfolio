@@ -67,7 +67,7 @@
     <form class="f rv" id="waForm">
       <div class="two">
         <label>Your name<input name="name" required placeholder="Name" /></label>
-        <label>Project type
+        <label>Type of video
           <select name="type" required>
             <option>Short-form reels</option><option>Long-form YouTube</option><option>Podcast clips</option>
             <option>AI commercial</option><option>SaaS animation</option><option>Motion graphics</option>
@@ -75,11 +75,10 @@
           </select>
         </label>
       </div>
-      <label>Footage link (Drive, Dropbox, etc.)<input name="link" placeholder="https://" /></label>
-      <label>Deadline<input name="deadline" placeholder="For example, 5 days" /></label>
-      <label>Anything we should know<textarea name="msg" placeholder="Style, reference videos, platforms"></textarea></label>
-      <button class="btn" type="submit">Send on WhatsApp <span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-      <p class="note">This opens WhatsApp with your details filled in. Nothing is stored on this site.</p>
+      <label>About your project<textarea name="msg" required placeholder="What is it about? Your brand, the platform, the style or videos you like"></textarea></label>
+      <label>Approximate budget<input name="budget" placeholder="For example, $300 or ₹25,000. Not sure is fine" /></label>
+      <button class="btn" type="submit">Book a call on WhatsApp <span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      <p class="note">This opens WhatsApp with your details filled in, and we reply to set up a call. Nothing is stored on this site.</p>
     </form>
   </div>
 </section>

@@ -128,7 +128,7 @@ const form = document.getElementById('waForm');
 form?.addEventListener('submit', (e) => {
   e.preventDefault();
   const d = Object.fromEntries(new FormData(form));
-  const text = 'Hi Standout Media, I am ' + d.name + '.\nProject: ' + d.type + '\nFootage link: ' + (d.link || 'will share later') + '\nDeadline: ' + (d.deadline || 'flexible') + '\n\n' + (d.msg || '');
+  const text = 'Hi Standout Media, I am ' + d.name + ' and I would like to book a call.\nType of video: ' + d.type + '\nBudget: ' + (d.budget || 'not sure yet') + '\n\nAbout the project:\n' + (d.msg || '');
   window.open(waLink(text), '_blank', 'noopener');
 });
 
