@@ -718,3 +718,9 @@ body.has-cur .cur, body.has-cur .cur-ring { opacity: 1; }
 
 /* CTA card: equal white space above and below */
 #faq + .sec { padding-top: clamp(36px, 6vw, 72px) !important; padding-bottom: clamp(36px, 6vw, 72px) !important; }
+
+/* Name beside the logo, same wordmark style as the main website */
+.nav-logo { display: flex; align-items: center; gap: 12px; }
+.nav-logo-text { font-family: var(--font-display); font-size: 18px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #fff; white-space: nowrap; }
+.foot-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+@media (max-width: 420px) { .nav-logo-text { font-size: 14px; letter-spacing: .1em; } .nav-logo { gap: 9px; } }
