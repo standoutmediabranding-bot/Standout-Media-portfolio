@@ -699,3 +699,6 @@ body.has-cur .cur, body.has-cur .cur-ring { opacity: 1; }
 .btn:active { transform: scale(1.06); animation: none; box-shadow: 0 0 0 6px rgba(39,251,107,.35), 0 12px 32px -8px rgba(39,251,107,.8); }
 .btn:active .ar { transform: rotate(-45deg); background: var(--electric); }
 @media (max-width: 700px) { .hero .btn { animation: ping 2.8s ease-out infinite; } .hero .btn:active { animation: none; } }
+
+/* CTA card: keep a gap under the dark FAQ section so the two dark blocks don't merge */
+#faq + .sec { padding-top: 28px !important; }
