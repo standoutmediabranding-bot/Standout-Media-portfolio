@@ -143,7 +143,7 @@ document.querySelectorAll('.bx').forEach(el => el.addEventListener('pointermove'
 document.querySelectorAll('.bento, .proc, .vals, .stat-pill, .faq, .tools').forEach(p => [...p.children].forEach((c, i) => c.style.setProperty('--d', (i * 110) + 'ms')));
 
 /* spotlight on process cards */
-document.querySelectorAll('.pc').forEach(el => el.addEventListener('pointermove', (e) => {
+document.querySelectorAll('.pc, .val').forEach(el => el.addEventListener('pointermove', (e) => {
   const r = el.getBoundingClientRect();
   el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
   el.style.setProperty('--my', (e.clientY - r.top) + 'px');

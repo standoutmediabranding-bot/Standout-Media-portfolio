@@ -741,3 +741,34 @@ body.has-cur .cur, body.has-cur .cur-ring { opacity: 1; }
 .slist li::before { content: ''; position: absolute; left: 0; top: .6em; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(39,251,107,.2); }
 .slist b { color: var(--ink); font-weight: 600; }
 @media (min-width: 901px) { .story .quote { position: sticky; top: 110px; } }
+
+/* About: "Three rules" as neon cards with a small animated visual each */
+.rules .val { position: relative; overflow: hidden; padding: 26px; border-radius: 26px; border: 1px solid #262c28; background: radial-gradient(120% 90% at 100% 0%, rgba(39,251,107,.12), transparent 55%), #141816; box-shadow: 0 30px 70px -40px rgba(0,0,0,.9); }
+.rules .val::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 0%), rgba(39,251,107,.18), transparent 55%); opacity: 0; transition: opacity .3s; }
+.rules .val:hover::after { opacity: 1; }
+.rules .val > * { position: relative; z-index: 1; }
+.rules .val h3 { color: #fff; font-size: 26px; margin-top: 4px; }
+.rules .val p { color: #a4aaa6; }
+.vno { position: absolute !important; top: 16px; right: 22px; font-family: var(--font-display); font-weight: 600; font-size: 56px; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(39,251,107,.4); z-index: 2; }
+.vart { height: 124px; margin-bottom: 22px; border-radius: 18px; border: 1px solid #232924; display: grid; place-items: center; overflow: hidden;
+  background: linear-gradient(rgba(39,251,107,.07) 1px, transparent 1px) 0 0 / 100% 22px, linear-gradient(90deg, rgba(39,251,107,.07) 1px, transparent 1px) 0 0 / 22px 100%, #0c0f0d; }
+.v-brand { display: flex; align-items: center; gap: 10px; }
+.v-brand .sw { display: block; width: 34px; height: 56px; border-radius: 12px; animation: rvbob 4s ease-in-out infinite; }
+.v-brand .s1 { background: #27fb6b; } .v-brand .s2 { background: #0B7443; animation-delay: -1s; }
+.v-brand .s3 { background: #fff; animation-delay: -2s; } .v-brand .s4 { background: #1f2522; border: 1px solid #3a413d; animation-delay: -3s; }
+.v-brand .aa { font-family: var(--font-display); font-weight: 600; font-size: 44px; color: #fff; margin-left: 8px; letter-spacing: -.04em; }
+@keyframes rvbob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.v-ret { width: 100%; height: 100%; }
+.v-ret .ln { stroke-dasharray: 1; stroke-dashoffset: 1; animation: rvdraw 5s ease-in-out infinite; filter: drop-shadow(0 0 6px rgba(39,251,107,.7)); }
+.v-ret .area { opacity: 0; animation: rvfade 5s ease-in-out infinite; }
+.v-ret .dt { opacity: 0; animation: rvdot 5s ease-in-out infinite; filter: drop-shadow(0 0 8px #27fb6b); }
+@keyframes rvdraw { 0% { stroke-dashoffset: 1; } 55%, 100% { stroke-dashoffset: 0; } }
+@keyframes rvfade { 0%, 20% { opacity: 0; } 60%, 100% { opacity: 1; } }
+@keyframes rvdot { 0%, 52% { opacity: 0; } 62%, 100% { opacity: 1; } }
+.v-ring { height: 100%; }
+.v-ring .rg { stroke-dasharray: 1; stroke-dashoffset: 1; animation: rvring 5s ease-in-out infinite; filter: drop-shadow(0 0 6px rgba(39,251,107,.7)); }
+.v-ring .rt { font-family: var(--font-display); font-weight: 600; font-size: 26px; fill: #fff; letter-spacing: -.03em; }
+@keyframes rvring { 0% { stroke-dashoffset: 1; } 60%, 100% { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .v-brand .sw, .v-ret .ln, .v-ret .area, .v-ret .dt, .v-ring .rg { animation: none !important; stroke-dashoffset: 0 !important; opacity: 1 !important; } }
+.rules .vno { top: 38px; left: 40px; right: auto; font-family: ui-monospace, Menlo, monospace; font-size: 12px; font-weight: 500; letter-spacing: .12em; color: #27fb6b; -webkit-text-stroke: 0; background: rgba(39,251,107,.12); border: 1px solid rgba(39,251,107,.3); padding: 3px 8px; border-radius: 999px; line-height: 1.2; }
+.rules .vno { z-index: 3; }
