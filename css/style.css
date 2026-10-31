@@ -706,3 +706,8 @@ body.has-cur .cur, body.has-cur .cur-ring { opacity: 1; }
 /* Hero CTA and top-right Contact: same press / hover animation as the "Send us the raw footage" button, no pulsing glow */
 .hero .btn { animation: none; }
 @media (hover: hover) { .hero .btn:hover, .nav-btn:hover { background: var(--electric); color: #000; } }
+
+/* Arrow circle stays dark on hover/press (like the raw-footage button); only the arrow turns */
+.btn:active .ar { background: var(--btn-arbg); }
+.btn.light:active .ar { background: var(--ink); }
+@media (hover: hover) { .hero .btn:hover .ar, .nav-btn:hover .ar { background: var(--btn-arbg); color: var(--btn-arfg); } }
