@@ -730,3 +730,14 @@ body.has-cur .cur, body.has-cur .cur-ring { opacity: 1; }
 .nav-logo img { height: 34px; }
 .nav-logo, .foot-brand { align-items: center; }
 .nav-logo-text { line-height: 1; display: block; }
+
+/* About story: three parts */
+.story-body .sblock { margin-bottom: 30px; }
+.story-body .sblock:last-child { margin-bottom: 0; }
+.slabel { display: block; font-family: ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+.story .slead { color: var(--ink); font-weight: 500; margin-bottom: 14px; }
+.slist { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.slist li { position: relative; padding-left: 26px; color: #3d423f; }
+.slist li::before { content: ''; position: absolute; left: 0; top: .6em; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(39,251,107,.2); }
+.slist b { color: var(--ink); font-weight: 600; }
+@media (min-width: 901px) { .story .quote { position: sticky; top: 110px; } }
