@@ -1,7 +1,7 @@
 /* Standout Media - editing portfolio */
 const CONFIG = {
   // Country code + number. Change here and every WhatsApp link updates.
-  whatsapp: '912870340306',
+  whatsapp: '918270340306',
   message: 'Hi Standout Media, I saw your editing portfolio and I want to talk about a project.'
 };
 
