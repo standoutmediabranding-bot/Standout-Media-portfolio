@@ -715,3 +715,6 @@ body.has-cur .cur, body.has-cur .cur-ring { opacity: 1; }
 /* Hero CTA keeps its pulsing glow (desktop and mobile); pressing still pops */
 .hero .btn { animation: ping 2.8s ease-out infinite; }
 .hero .btn:active { animation: none; }
+
+/* CTA card: equal white space above and below */
+#faq + .sec { padding-top: clamp(36px, 6vw, 72px) !important; padding-bottom: clamp(36px, 6vw, 72px) !important; }
